@@ -1,0 +1,10 @@
+PODS:
+  - BFColorPickerPopover (0.0.1)
+
+DEPENDENCIES:
+  - BFColorPickerPopover
+
+SPEC CHECKSUMS:
+  BFColorPickerPopover: 909ab85fb9852b2446d36fc80759295400ea8ecd
+
+COCOAPODS: 0.29.0

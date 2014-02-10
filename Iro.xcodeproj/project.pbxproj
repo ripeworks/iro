@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A33C490618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C490518A8F78C00A5B4F8 /* Cocoa.framework */; };
+		A33C491018A8F78C00A5B4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A33C490E18A8F78C00A5B4F8 /* InfoPlist.strings */; };
+		A33C491218A8F78C00A5B4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C491118A8F78C00A5B4F8 /* main.m */; };
+		A33C491618A8F78C00A5B4F8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A33C491418A8F78C00A5B4F8 /* Credits.rtf */; };
+		A33C491918A8F78C00A5B4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C491818A8F78C00A5B4F8 /* AppDelegate.m */; };
+		A33C491C18A8F78C00A5B4F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */; };
+		A33C491E18A8F78C00A5B4F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33C491D18A8F78C00A5B4F8 /* Images.xcassets */; };
+		A33C492518A8F78C00A5B4F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C492418A8F78C00A5B4F8 /* XCTest.framework */; };
+		A33C492618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C490518A8F78C00A5B4F8 /* Cocoa.framework */; };
+		A33C492E18A8F78C00A5B4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A33C492C18A8F78C00A5B4F8 /* InfoPlist.strings */; };
+		A33C493018A8F78C00A5B4F8 /* IroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C492F18A8F78C00A5B4F8 /* IroTests.m */; };
+		A39C73D718A90D300069929E /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C73D618A90D300069929E /* StatusItemView.m */; };
+		A39C73DA18A910A80069929E /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73D818A910A80069929E /* Status.png */; };
+		A39C73DB18A910A80069929E /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73D918A910A80069929E /* Status@2x.png */; };
+		A39C73DE18A911E20069929E /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73DC18A911E20069929E /* StatusHighlighted.png */; };
+		A39C73DF18A911E20069929E /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73DD18A911E20069929E /* StatusHighlighted@2x.png */; };
+		EF463F8017054B4DB571543C /* libPods-Iro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1563D05B8B4B95A389C392 /* libPods-Iro.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A33C492718A8F78C00A5B4F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33C48FA18A8F78C00A5B4F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A33C490118A8F78C00A5B4F8;
+			remoteInfo = Iro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iro.xcconfig"; path = "Pods/Pods-Iro.xcconfig"; sourceTree = "<group>"; };
+		1F1563D05B8B4B95A389C392 /* libPods-Iro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Iro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33C490218A8F78C00A5B4F8 /* Iro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33C490518A8F78C00A5B4F8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A33C490818A8F78C00A5B4F8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A33C490918A8F78C00A5B4F8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A33C490A18A8F78C00A5B4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A33C490D18A8F78C00A5B4F8 /* Iro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Iro-Info.plist"; sourceTree = "<group>"; };
+		A33C490F18A8F78C00A5B4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A33C491118A8F78C00A5B4F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A33C491318A8F78C00A5B4F8 /* Iro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Iro-Prefix.pch"; sourceTree = "<group>"; };
+		A33C491518A8F78C00A5B4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A33C491718A8F78C00A5B4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A33C491818A8F78C00A5B4F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A33C491B18A8F78C00A5B4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A33C491D18A8F78C00A5B4F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A33C492318A8F78C00A5B4F8 /* IroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33C492418A8F78C00A5B4F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A33C492B18A8F78C00A5B4F8 /* IroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IroTests-Info.plist"; sourceTree = "<group>"; };
+		A33C492D18A8F78C00A5B4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A33C492F18A8F78C00A5B4F8 /* IroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IroTests.m; sourceTree = "<group>"; };
+		A39C73D518A90D300069929E /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		A39C73D618A90D300069929E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		A39C73D818A910A80069929E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Status.png; sourceTree = "<group>"; };
+		A39C73D918A910A80069929E /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Status@2x.png"; sourceTree = "<group>"; };
+		A39C73DC18A911E20069929E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusHighlighted.png; sourceTree = "<group>"; };
+		A39C73DD18A911E20069929E /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A33C48FF18A8F78C00A5B4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33C490618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */,
+				EF463F8017054B4DB571543C /* libPods-Iro.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33C492018A8F78C00A5B4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33C492618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */,
+				A33C492518A8F78C00A5B4F8 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A33C48F918A8F78C00A5B4F8 = {
+			isa = PBXGroup;
+			children = (
+				A33C490B18A8F78C00A5B4F8 /* Iro */,
+				A33C492918A8F78C00A5B4F8 /* IroTests */,
+				A33C490418A8F78C00A5B4F8 /* Frameworks */,
+				A33C490318A8F78C00A5B4F8 /* Products */,
+				06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A33C490318A8F78C00A5B4F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A33C490218A8F78C00A5B4F8 /* Iro.app */,
+				A33C492318A8F78C00A5B4F8 /* IroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A33C490418A8F78C00A5B4F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A33C490518A8F78C00A5B4F8 /* Cocoa.framework */,
+				A33C492418A8F78C00A5B4F8 /* XCTest.framework */,
+				A33C490718A8F78C00A5B4F8 /* Other Frameworks */,
+				1F1563D05B8B4B95A389C392 /* libPods-Iro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A33C490718A8F78C00A5B4F8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A33C490818A8F78C00A5B4F8 /* AppKit.framework */,
+				A33C490918A8F78C00A5B4F8 /* CoreData.framework */,
+				A33C490A18A8F78C00A5B4F8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A33C490B18A8F78C00A5B4F8 /* Iro */ = {
+			isa = PBXGroup;
+			children = (
+				A33C491718A8F78C00A5B4F8 /* AppDelegate.h */,
+				A33C491818A8F78C00A5B4F8 /* AppDelegate.m */,
+				A39C73D518A90D300069929E /* StatusItemView.h */,
+				A39C73D618A90D300069929E /* StatusItemView.m */,
+				A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */,
+				A39C73D818A910A80069929E /* Status.png */,
+				A39C73D918A910A80069929E /* Status@2x.png */,
+				A39C73DC18A911E20069929E /* StatusHighlighted.png */,
+				A39C73DD18A911E20069929E /* StatusHighlighted@2x.png */,
+				A33C491D18A8F78C00A5B4F8 /* Images.xcassets */,
+				A33C490C18A8F78C00A5B4F8 /* Supporting Files */,
+			);
+			path = Iro;
+			sourceTree = "<group>";
+		};
+		A33C490C18A8F78C00A5B4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33C490D18A8F78C00A5B4F8 /* Iro-Info.plist */,
+				A33C490E18A8F78C00A5B4F8 /* InfoPlist.strings */,
+				A33C491118A8F78C00A5B4F8 /* main.m */,
+				A33C491318A8F78C00A5B4F8 /* Iro-Prefix.pch */,
+				A33C491418A8F78C00A5B4F8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A33C492918A8F78C00A5B4F8 /* IroTests */ = {
+			isa = PBXGroup;
+			children = (
+				A33C492F18A8F78C00A5B4F8 /* IroTests.m */,
+				A33C492A18A8F78C00A5B4F8 /* Supporting Files */,
+			);
+			path = IroTests;
+			sourceTree = "<group>";
+		};
+		A33C492A18A8F78C00A5B4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33C492B18A8F78C00A5B4F8 /* IroTests-Info.plist */,
+				A33C492C18A8F78C00A5B4F8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A33C490118A8F78C00A5B4F8 /* Iro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33C493318A8F78C00A5B4F8 /* Build configuration list for PBXNativeTarget "Iro" */;
+			buildPhases = (
+				EC920F544DF140E9A6209EC6 /* Check Pods Manifest.lock */,
+				A33C48FE18A8F78C00A5B4F8 /* Sources */,
+				A33C48FF18A8F78C00A5B4F8 /* Frameworks */,
+				A33C490018A8F78C00A5B4F8 /* Resources */,
+				2D2A65CB29B24D9995CB05D5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Iro;
+			productName = Iro;
+			productReference = A33C490218A8F78C00A5B4F8 /* Iro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A33C492218A8F78C00A5B4F8 /* IroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33C493618A8F78C00A5B4F8 /* Build configuration list for PBXNativeTarget "IroTests" */;
+			buildPhases = (
+				A33C491F18A8F78C00A5B4F8 /* Sources */,
+				A33C492018A8F78C00A5B4F8 /* Frameworks */,
+				A33C492118A8F78C00A5B4F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A33C492818A8F78C00A5B4F8 /* PBXTargetDependency */,
+			);
+			name = IroTests;
+			productName = IroTests;
+			productReference = A33C492318A8F78C00A5B4F8 /* IroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A33C48FA18A8F78C00A5B4F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Ripeworks;
+				TargetAttributes = {
+					A33C492218A8F78C00A5B4F8 = {
+						TestTargetID = A33C490118A8F78C00A5B4F8;
+					};
+				};
+			};
+			buildConfigurationList = A33C48FD18A8F78C00A5B4F8 /* Build configuration list for PBXProject "Iro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A33C48F918A8F78C00A5B4F8;
+			productRefGroup = A33C490318A8F78C00A5B4F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A33C490118A8F78C00A5B4F8 /* Iro */,
+				A33C492218A8F78C00A5B4F8 /* IroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A33C490018A8F78C00A5B4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33C491018A8F78C00A5B4F8 /* InfoPlist.strings in Resources */,
+				A33C491E18A8F78C00A5B4F8 /* Images.xcassets in Resources */,
+				A39C73DF18A911E20069929E /* StatusHighlighted@2x.png in Resources */,
+				A39C73DB18A910A80069929E /* Status@2x.png in Resources */,
+				A33C491618A8F78C00A5B4F8 /* Credits.rtf in Resources */,
+				A39C73DA18A910A80069929E /* Status.png in Resources */,
+				A39C73DE18A911E20069929E /* StatusHighlighted.png in Resources */,
+				A33C491C18A8F78C00A5B4F8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33C492118A8F78C00A5B4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33C492E18A8F78C00A5B4F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D2A65CB29B24D9995CB05D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Iro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC920F544DF140E9A6209EC6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A33C48FE18A8F78C00A5B4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39C73D718A90D300069929E /* StatusItemView.m in Sources */,
+				A33C491918A8F78C00A5B4F8 /* AppDelegate.m in Sources */,
+				A33C491218A8F78C00A5B4F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33C491F18A8F78C00A5B4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33C493018A8F78C00A5B4F8 /* IroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A33C492818A8F78C00A5B4F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A33C490118A8F78C00A5B4F8 /* Iro */;
+			targetProxy = A33C492718A8F78C00A5B4F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A33C490E18A8F78C00A5B4F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33C490F18A8F78C00A5B4F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A33C491418A8F78C00A5B4F8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33C491518A8F78C00A5B4F8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33C491B18A8F78C00A5B4F8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A33C492C18A8F78C00A5B4F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33C492D18A8F78C00A5B4F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A33C493118A8F78C00A5B4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A33C493218A8F78C00A5B4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A33C493418A8F78C00A5B4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
+				INFOPLIST_FILE = "Iro/Iro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A33C493518A8F78C00A5B4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
+				INFOPLIST_FILE = "Iro/Iro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A33C493718A8F78C00A5B4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Iro.app/Contents/MacOS/Iro";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IroTests/IroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A33C493818A8F78C00A5B4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Iro.app/Contents/MacOS/Iro";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
+				INFOPLIST_FILE = "IroTests/IroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A33C48FD18A8F78C00A5B4F8 /* Build configuration list for PBXProject "Iro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33C493118A8F78C00A5B4F8 /* Debug */,
+				A33C493218A8F78C00A5B4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33C493318A8F78C00A5B4F8 /* Build configuration list for PBXNativeTarget "Iro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33C493418A8F78C00A5B4F8 /* Debug */,
+				A33C493518A8F78C00A5B4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33C493618A8F78C00A5B4F8 /* Build configuration list for PBXNativeTarget "IroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33C493718A8F78C00A5B4F8 /* Debug */,
+				A33C493818A8F78C00A5B4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A33C48FA18A8F78C00A5B4F8 /* Project object */;
+}
