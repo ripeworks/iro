@@ -39,7 +39,7 @@
     //[settings addItemWithTitle:@"Start at login" action:@selector(toggleStartAtLogin:) keyEquivalent:@""];
     
     [settings addItem:[NSMenuItem separatorItem]];
-    [settings addItemWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@"q"];
+    [settings addItemWithTitle:@"Quit Iro" action:@selector(quit) keyEquivalent:@"q"];
     
     menuButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(208, 360, 40, 50) pullsDown:YES];
     [menuButton setPreferredEdge:NSMaxYEdge];
