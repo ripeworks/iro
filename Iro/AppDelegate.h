@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "StatusItemView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 {
     NSPopUpButton *menuButton;
     NSMenu *settings;
