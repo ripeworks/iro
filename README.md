@@ -13,3 +13,8 @@ __Installing Panic's Developer Color Picker__
 ```bash
 $ mv DeveloperColorPicker.colorPicker ~/Library/ColorPickers/DeveloperColorPicker.colorPicker
 ```
+
+## Credits
+
+* [BFColorPickerPopover](https://github.com/DrummerB/BFColorPickerPopover) for displaying native color picker.
+* [Batch](https://github.com/AdamWhitcroft/Batch) for droplet menu bar icon.
