@@ -4,6 +4,12 @@ Tired of OSX color picker apps either totally sucking or costing money. This one
 
 ![Screenshot](Preview.png)
 
+## Features
+
+* Displays native color picker (as well as custom color pickers).
+* Copy current color HEX value to clipboard.
+* No item in dock, yay!
+
 ## Developer Color Picker
 
 [Panic - Developer Color Picker](https://panic.com/~wade/picker/)
