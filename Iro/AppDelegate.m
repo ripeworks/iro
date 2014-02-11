@@ -28,19 +28,20 @@
     // cog menu
     settings = [[NSMenu alloc] initWithTitle:@""];
     [settings setAutoenablesItems:NO];
-    // add blank item for PopUpButton
-    [settings addItemWithTitle:@"" action:nil keyEquivalent:@""];
+    // add image'd item for PopUpButton
+    NSMenuItem *selectedItem = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
+    [selectedItem setImage:[NSImage imageNamed:NSImageNameActionTemplate]];
+    [settings addItem:selectedItem];
     
-    settingHexValue = [[NSMenuItem alloc] initWithTitle:@"Copy #" action:@selector(copyHexColor) keyEquivalent:@""];
+    settingHexValue = [[NSMenuItem alloc] initWithTitle:@"Copy color" action:@selector(copyHexColor) keyEquivalent:@""];
     [settings addItem:settingHexValue];
     // TODO: Option to start app at login
-    //[settings addItemWithTitle:@"Start at login" action:@selector(settingsStartAtLogin:) keyEquivalent:@""];
+    //[settings addItemWithTitle:@"Start at login" action:@selector(toggleStartAtLogin:) keyEquivalent:@""];
     
     [settings addItemWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@"q"];
     
-    menuButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(200, 330, 50, 50) pullsDown:YES];
+    menuButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(200, 358, 50, 50) pullsDown:YES];
     [menuButton setPreferredEdge:NSMaxYEdge];
-    [menuButton setTitle:@"Settings"];
     [menuButton setMenu:settings];
     
     // callback for picking a color
@@ -66,7 +67,7 @@
         return;
     }
     [settingHexValue setEnabled:YES];
-    [settingHexValue setTitle:[NSString stringWithFormat:@"Copy %@", hex]];
+    [settingHexValue setTitle:[NSString stringWithFormat:@"Copy \"%@\"", hex]];
 }
 
 - (void)copyHexColor
@@ -81,7 +82,7 @@
     [NSApp terminate:self];
 }
     
-- (void)settingsStartAtLogin:(id)sender
+- (void)toggleStartAtLogin:(id)sender
 {
     NSMenuItem *item = sender;
     item.state = item.state == NSOnState ? NSOffState : NSOnState;
