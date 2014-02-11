@@ -8,35 +8,89 @@
 
 #import "AppDelegate.h"
 #import "BFColorPickerPopover.h"
+#import "NSColor+Hex.h"
 
 @implementation AppDelegate
-    
+
 @synthesize statusItem;
 @synthesize statusItemView;
-    
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // init status bar
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     statusItemView = [[StatusItemView alloc] initWithStatusItem:statusItem];
     
-    // set it up!
-    //[statusItem setAction:@selector(statusItemClicked)];
     [statusItemView setAction:@selector(statusItemClicked)];
     [statusItemView setImage:[NSImage imageNamed:@"Status"]];
     [statusItemView setAlternateImage:[NSImage imageNamed:@"StatusHighlighted"]];
-    //[statusItem setImage:[NSImage imageNamed:@"Status"]];
-    //[statusItem setView:statusItemView];
+
+    // cog menu
+    settings = [[NSMenu alloc] initWithTitle:@""];
+    [settings setAutoenablesItems:NO];
+    // add blank item for PopUpButton
+    [settings addItemWithTitle:@"" action:nil keyEquivalent:@""];
     
+    settingHexValue = [[NSMenuItem alloc] initWithTitle:@"Copy #" action:@selector(copyHexColor) keyEquivalent:@""];
+    [settings addItem:settingHexValue];
+    // TODO: Option to start app at login
+    //[settings addItemWithTitle:@"Start at login" action:@selector(settingsStartAtLogin:) keyEquivalent:@""];
     
-	//[[BFColorPickerPopover sharedPopover] setAction:@selector(colorChanged:)];
-	//[[BFColorPickerPopover sharedPopover] setColor:backgroundView.backgroundColor];
+    [settings addItemWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@"q"];
+    
+    menuButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(200, 330, 50, 50) pullsDown:YES];
+    [menuButton setPreferredEdge:NSMaxYEdge];
+    [menuButton setTitle:@"Settings"];
+    [menuButton setMenu:settings];
+    
+    // callback for picking a color
+    [[BFColorPickerPopover sharedPopover] setAction:@selector(didPickColor)];
+    // set copy hex menu item
+    [self didPickColor];
 }
 
 - (void)statusItemClicked
 {
     [[BFColorPickerPopover sharedPopover] showRelativeToRect:statusItem.view.frame ofView:statusItem.view preferredEdge:NSMinYEdge];
 	[[BFColorPickerPopover sharedPopover] setTarget:self];
+    
+    // add settings button to color picker viewController
+    [[[[BFColorPickerPopover sharedPopover] contentViewController] view] addSubview:menuButton];
+}
+
+- (void)didPickColor
+{
+    NSString *hex = [[[BFColorPickerPopover sharedPopover] color] hexValue];
+    if (!hex) {
+        [settingHexValue setEnabled:NO];
+        return;
+    }
+    [settingHexValue setEnabled:YES];
+    [settingHexValue setTitle:[NSString stringWithFormat:@"Copy %@", hex]];
+}
+
+- (void)copyHexColor
+{
+    NSString *hex = [[[BFColorPickerPopover sharedPopover] color] hexValue];
+    [[NSPasteboard generalPasteboard] clearContents];
+    [[NSPasteboard generalPasteboard] setString:hex  forType:NSStringPboardType];
+}
+
+- (void)quit
+{
+    [NSApp terminate:self];
+}
+    
+- (void)settingsStartAtLogin:(id)sender
+{
+    NSMenuItem *item = sender;
+    item.state = item.state == NSOnState ? NSOffState : NSOnState;
+    
+    if (item.state == NSOnState) {
+        // enable start at login
+    } else {
+        // disable start at login
+    }
 }
 
 @end

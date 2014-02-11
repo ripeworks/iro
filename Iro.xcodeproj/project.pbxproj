@@ -23,6 +23,8 @@
 		A39C73DB18A910A80069929E /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73D918A910A80069929E /* Status@2x.png */; };
 		A39C73DE18A911E20069929E /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73DC18A911E20069929E /* StatusHighlighted.png */; };
 		A39C73DF18A911E20069929E /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73DD18A911E20069929E /* StatusHighlighted@2x.png */; };
+		A39C742F18AA4B190069929E /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C742C18AA46C80069929E /* ServiceManagement.framework */; };
+		A39C743318AA4D690069929E /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C743218AA4D690069929E /* NSColor+Hex.m */; };
 		EF463F8017054B4DB571543C /* libPods-Iro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1563D05B8B4B95A389C392 /* libPods-Iro.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,10 @@
 		A39C73D918A910A80069929E /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Status@2x.png"; sourceTree = "<group>"; };
 		A39C73DC18A911E20069929E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusHighlighted.png; sourceTree = "<group>"; };
 		A39C73DD18A911E20069929E /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+		A39C742C18AA46C80069929E /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		A39C743018AA4B240069929E /* Iro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Iro.entitlements; sourceTree = "<group>"; };
+		A39C743118AA4D690069929E /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Hex.h"; sourceTree = "<group>"; };
+		A39C743218AA4D690069929E /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C742F18AA4B190069929E /* ServiceManagement.framework in Frameworks */,
 				A33C490618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */,
 				EF463F8017054B4DB571543C /* libPods-Iro.a in Frameworks */,
 			);
@@ -111,6 +118,7 @@
 		A33C490418A8F78C00A5B4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A39C742C18AA46C80069929E /* ServiceManagement.framework */,
 				A33C490518A8F78C00A5B4F8 /* Cocoa.framework */,
 				A33C492418A8F78C00A5B4F8 /* XCTest.framework */,
 				A33C490718A8F78C00A5B4F8 /* Other Frameworks */,
@@ -132,10 +140,13 @@
 		A33C490B18A8F78C00A5B4F8 /* Iro */ = {
 			isa = PBXGroup;
 			children = (
+				A39C743018AA4B240069929E /* Iro.entitlements */,
 				A33C491718A8F78C00A5B4F8 /* AppDelegate.h */,
 				A33C491818A8F78C00A5B4F8 /* AppDelegate.m */,
-				A39C73D518A90D300069929E /* StatusItemView.h */,
 				A39C73D618A90D300069929E /* StatusItemView.m */,
+				A39C73D518A90D300069929E /* StatusItemView.h */,
+				A39C743118AA4D690069929E /* NSColor+Hex.h */,
+				A39C743218AA4D690069929E /* NSColor+Hex.m */,
 				A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */,
 				A39C73D818A910A80069929E /* Status.png */,
 				A39C73D918A910A80069929E /* Status@2x.png */,
@@ -226,6 +237,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Ripeworks;
 				TargetAttributes = {
+					A33C490118A8F78C00A5B4F8 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					A33C492218A8F78C00A5B4F8 = {
 						TestTargetID = A33C490118A8F78C00A5B4F8;
 					};
@@ -314,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39C743318AA4D690069929E /* NSColor+Hex.m in Sources */,
 				A39C73D718A90D300069929E /* StatusItemView.m in Sources */,
 				A33C491918A8F78C00A5B4F8 /* AppDelegate.m in Sources */,
 				A33C491218A8F78C00A5B4F8 /* main.m in Sources */,
@@ -447,6 +466,8 @@
 			baseConfigurationReference = 06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Iro/Iro.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
@@ -461,6 +482,8 @@
 			baseConfigurationReference = 06D4884BD42E406FA733F666 /* Pods-Iro.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Iro/Iro.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";

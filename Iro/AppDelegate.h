@@ -10,7 +10,12 @@
 #import "StatusItemView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
+{
+    NSPopUpButton *menuButton;
+    NSMenu *settings;
+    NSMenuItem *settingHexValue;
+}
+    
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (strong, nonatomic) StatusItemView *statusItemView;
