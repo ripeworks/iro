@@ -12,7 +12,6 @@
 		A33C491218A8F78C00A5B4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C491118A8F78C00A5B4F8 /* main.m */; };
 		A33C491618A8F78C00A5B4F8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A33C491418A8F78C00A5B4F8 /* Credits.rtf */; };
 		A33C491918A8F78C00A5B4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C491818A8F78C00A5B4F8 /* AppDelegate.m */; };
-		A33C491C18A8F78C00A5B4F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */; };
 		A33C491E18A8F78C00A5B4F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33C491D18A8F78C00A5B4F8 /* Images.xcassets */; };
 		A33C492518A8F78C00A5B4F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C492418A8F78C00A5B4F8 /* XCTest.framework */; };
 		A33C492618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C490518A8F78C00A5B4F8 /* Cocoa.framework */; };
@@ -53,7 +52,6 @@
 		A33C491518A8F78C00A5B4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A33C491718A8F78C00A5B4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A33C491818A8F78C00A5B4F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A33C491B18A8F78C00A5B4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A33C491D18A8F78C00A5B4F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A33C492318A8F78C00A5B4F8 /* IroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33C492418A8F78C00A5B4F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -147,7 +145,6 @@
 				A39C73D518A90D300069929E /* StatusItemView.h */,
 				A39C743118AA4D690069929E /* NSColor+Hex.h */,
 				A39C743218AA4D690069929E /* NSColor+Hex.m */,
-				A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */,
 				A39C73D818A910A80069929E /* Status.png */,
 				A39C73D918A910A80069929E /* Status@2x.png */,
 				A39C73DC18A911E20069929E /* StatusHighlighted.png */,
@@ -280,7 +277,6 @@
 				A33C491618A8F78C00A5B4F8 /* Credits.rtf in Resources */,
 				A39C73DA18A910A80069929E /* Status.png in Resources */,
 				A39C73DE18A911E20069929E /* StatusHighlighted.png in Resources */,
-				A33C491C18A8F78C00A5B4F8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +370,6 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		A33C491A18A8F78C00A5B4F8 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A33C491B18A8F78C00A5B4F8 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		A33C492C18A8F78C00A5B4F8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -472,6 +460,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
 				INFOPLIST_FILE = "Iro/Iro-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -488,6 +477,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Iro/Iro-Prefix.pch";
 				INFOPLIST_FILE = "Iro/Iro-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
