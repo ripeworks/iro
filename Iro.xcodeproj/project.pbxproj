@@ -17,6 +17,7 @@
 		A33C492618A8F78C00A5B4F8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33C490518A8F78C00A5B4F8 /* Cocoa.framework */; };
 		A33C492E18A8F78C00A5B4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A33C492C18A8F78C00A5B4F8 /* InfoPlist.strings */; };
 		A33C493018A8F78C00A5B4F8 /* IroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33C492F18A8F78C00A5B4F8 /* IroTests.m */; };
+		A345F61218AED46C0056D312 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345F61018AED46C0056D312 /* MainMenu.xib */; };
 		A39C73D718A90D300069929E /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C73D618A90D300069929E /* StatusItemView.m */; };
 		A39C73DA18A910A80069929E /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73D818A910A80069929E /* Status.png */; };
 		A39C73DB18A910A80069929E /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39C73D918A910A80069929E /* Status@2x.png */; };
@@ -58,6 +59,7 @@
 		A33C492B18A8F78C00A5B4F8 /* IroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IroTests-Info.plist"; sourceTree = "<group>"; };
 		A33C492D18A8F78C00A5B4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A33C492F18A8F78C00A5B4F8 /* IroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IroTests.m; sourceTree = "<group>"; };
+		A345F61118AED46C0056D312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A39C73D518A90D300069929E /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		A39C73D618A90D300069929E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 		A39C73D818A910A80069929E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Status.png; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		A33C490B18A8F78C00A5B4F8 /* Iro */ = {
 			isa = PBXGroup;
 			children = (
+				A345F61018AED46C0056D312 /* MainMenu.xib */,
 				A39C743018AA4B240069929E /* Iro.entitlements */,
 				A33C491718A8F78C00A5B4F8 /* AppDelegate.h */,
 				A33C491818A8F78C00A5B4F8 /* AppDelegate.m */,
@@ -277,6 +280,7 @@
 				A33C491618A8F78C00A5B4F8 /* Credits.rtf in Resources */,
 				A39C73DA18A910A80069929E /* Status.png in Resources */,
 				A39C73DE18A911E20069929E /* StatusHighlighted.png in Resources */,
+				A345F61218AED46C0056D312 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +380,14 @@
 				A33C492D18A8F78C00A5B4F8 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A345F61018AED46C0056D312 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A345F61118AED46C0056D312 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
