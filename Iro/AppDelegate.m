@@ -13,17 +13,16 @@
 @implementation AppDelegate
 
 @synthesize statusItem;
-@synthesize statusItemView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // init status bar
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    statusItemView = [[StatusItemView alloc] initWithStatusItem:statusItem];
+    NSImage *statusIcon = [NSImage imageNamed:@"Status"];
+    statusIcon.template = YES;
     
-    [statusItemView setAction:@selector(didClickStatusItem)];
-    [statusItemView setImage:[NSImage imageNamed:@"Status"]];
-    [statusItemView setAlternateImage:[NSImage imageNamed:@"StatusHighlighted"]];
+    statusItem.button.image = statusIcon;
+    [statusItem setAction:@selector(didClickStatusItem)];
 
     // cog menu
     settings = [[NSMenu alloc] initWithTitle:@""];
@@ -50,11 +49,33 @@
 
 - (void)didClickStatusItem
 {
-    [[BFColorPickerPopover sharedPopover] showRelativeToRect:statusItem.view.frame ofView:statusItem.view preferredEdge:NSMinYEdge];
+    [[BFColorPickerPopover sharedPopover] showRelativeToRect:statusItem.button.frame ofView:statusItem.button preferredEdge:NSMinYEdge];
 	[[BFColorPickerPopover sharedPopover] setTarget:self];
 
     // add settings button to color picker viewController
     [[[[BFColorPickerPopover sharedPopover] contentViewController] view] addSubview:menuButton];
+    
+    // watch for mouse events outside of view
+    if(popoverActiveMonitor == nil)
+    {
+        popoverActiveMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseUp|NSRightMouseDownMask handler:^(NSEvent* event)
+                                {
+                                    [self dismissPopover:event];
+                                }];
+    }
+}
+
+- (void)dismissPopover:(NSEvent *)event
+{
+    // remove click monitor
+    if(popoverActiveMonitor)
+    {
+        [NSEvent removeMonitor:popoverActiveMonitor];
+        popoverActiveMonitor = nil;
+    }
+    
+    // close popover
+    [[BFColorPickerPopover sharedPopover] close];
 }
 
 - (void)copyHexColor

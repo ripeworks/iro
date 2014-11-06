@@ -7,17 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "StatusItemView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 {
     NSPopUpButton *menuButton;
     NSMenu *settings;
     NSMenuItem *settingHexValue;
+    id popoverActiveMonitor;
 }
     
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSStatusItem *statusItem;
-@property (strong, nonatomic) StatusItemView *statusItemView;
 
 @end
