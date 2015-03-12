@@ -12,13 +12,12 @@ __[Download](https://github.com/ripeworks/iro/releases)__
 * Copy current color HEX value to clipboard.
 * No item in dock, yay!
 
-## Developer Color Picker
+## Color Pickers you should have
 
-[Panic - Developer Color Picker](https://panic.com/~wade/picker/)
+* [Bjango - Skala Color](http://download.bjango.com/skalacolor/)
+* [Panic - Developer Color Picker](https://panic.com/~wade/picker/)
 
-This color picker is probably what you want to use with Iro. It will provide you with several color formats with the ability to copy to clipboard.
-
-__Installing Panic's Developer Color Picker__
+__Installing Color Pickers__
 
 ```bash
 $ mv DeveloperColorPicker.colorPicker ~/Library/ColorPickers/DeveloperColorPicker.colorPicker
